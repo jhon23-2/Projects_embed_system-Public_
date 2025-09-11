@@ -1,0 +1,13 @@
+/*
+ * File:   newmain.c
+ * Author: jhonatanalmanza
+ *
+ * Created on September 9, 2025, 1:52 PM
+ */
+
+
+#include <xc.h>
+
+void main(void) {
+    return;
+}
