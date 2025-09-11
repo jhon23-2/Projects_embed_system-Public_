@@ -1,0 +1,100 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 0 ]
+"5 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"10 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /Applications/microchip/xc8/v3.10/pic/sources/c99/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"21 /Users/jhonatanalmanza/MPLABXProjects/Projects_embed_system/exercie3.X/newmain.c
+[v _show_numbers show_numbers `(v  1 e 1 0 ]
+"58
+[v _listener_btns listener_btns `(v  1 e 1 0 ]
+"87
+[v _main main `(i  1 e 2 0 ]
+"166 /Applications/microchip/mplabx/v6.25/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"290
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"352
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"1416
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1540
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1602
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"3387
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"4083
+[v _RA0 RA0 `VEb  1 e 0 @40 ]
+"4086
+[v _RA1 RA1 `VEb  1 e 0 @41 ]
+"4089
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"16 /Users/jhonatanalmanza/MPLABXProjects/Projects_embed_system/exercie3.X/newmain.c
+[v _DIGITS DIGITS `DC[10]uc  1 e 10 0 ]
+"17
+[v _count count `uc  1 e 1 0 ]
+"18
+[v _value value `i  1 e 2 0 ]
+"19
+[v _state state `uc  1 e 1 0 ]
+"87
+[v _main main `(i  1 e 2 0 ]
+{
+"114
+} 0
+"21
+[v _show_numbers show_numbers `(v  1 e 1 0 ]
+{
+"25
+[v show_numbers@units units `i  1 a 2 10 ]
+"24
+[v show_numbers@tens tens `i  1 a 2 8 ]
+"23
+[v show_numbers@hundreds hundreds `i  1 a 2 6 ]
+"22
+[v show_numbers@thousands thousands `i  1 a 2 4 ]
+"21
+[v show_numbers@val val `i  1 p 2 0 ]
+"56
+} 0
+"5 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 13 ]
+[v ___awmod@counter counter `uc  1 a 1 12 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 8 ]
+[v ___awmod@dividend dividend `i  1 p 2 10 ]
+"34
+} 0
+"5 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
+"58 /Users/jhonatanalmanza/MPLABXProjects/Projects_embed_system/exercie3.X/newmain.c
+[v _listener_btns listener_btns `(v  1 e 1 0 ]
+{
+"85
+} 0
