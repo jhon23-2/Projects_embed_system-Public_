@@ -9,7 +9,7 @@ Este repositorio contiene proyectos desarrollados utilizando el microcontrolador
 
 ## 🔧 Microcontrolador PIC16F887
 
-![PIC16F887](hhttps://github.com/jhon23-2/Projects_embed_system-Public_/blob/main/PIC_IMAGE.png)
+![PIC16F887](https://github.com/jhon23-2/Projects_embed_system-Public_/blob/main/PIC_IMAGE.png)
 *Microcontrolador PIC16F887 - Diagrama de pines*
 
 ## 🎯 Ejercicios Desarrollados
