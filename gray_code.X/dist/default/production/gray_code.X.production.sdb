@@ -1,0 +1,38 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 0 ]
+"10 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /Applications/microchip/xc8/v3.10/pic/sources/c99/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"25 /Users/jhonatanalmanza/MPLABXProjects/Projects_embed_system/gray_code.X/gray_code.c
+[v _display_gray_code display_gray_code `(v  1 e 1 0 ]
+"30
+[v _main main `(i  1 e 2 0 ]
+"352 /Applications/microchip/mplabx/v6.25/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f887.h
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"1602
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"15 /Users/jhonatanalmanza/MPLABXProjects/Projects_embed_system/gray_code.X/gray_code.c
+[v _GRAY_CODE GRAY_CODE `DC[5]uc  1 e 5 0 ]
+"23
+[v _counter counter `uc  1 e 1 0 ]
+"30
+[v _main main `(i  1 e 2 0 ]
+{
+"49
+} 0
+"25
+[v _display_gray_code display_gray_code `(v  1 e 1 0 ]
+{
+[v display_gray_code@decimal_value decimal_value `uc  1 p 1 wreg ]
+[v display_gray_code@decimal_value decimal_value `uc  1 p 1 wreg ]
+[v display_gray_code@decimal_value decimal_value `uc  1 p 1 3 ]
+"28
+} 1
