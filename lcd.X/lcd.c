@@ -1,38 +1,28 @@
 /*
  * File: main.c
- * Reloj Digital con LCD I2C
- * Microcontrolador: PIC16F887
+ * Hello World side by side with I2C module 
+ * Microcontroller: PIC16F887
  * Cristal: 20MHz (HS)
+ * Jhonattan:dev ;) if this project works to you please left your like to this repo.... ;)
  */
-
 #include <xc.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <stdbool.h>
 #include "i2c.h"
 #include "lcd_i2c.h"
 
-// ===== CONFIGURACIÓN DEL PIC16F887 =====
-#pragma config FOSC = HS        // Oscilador HS (cristal 20MHz)
-#pragma config WDTE = OFF       // Watchdog Timer deshabilitado
-#pragma config PWRTE = OFF      // Power-up Timer deshabilitado
-#pragma config MCLRE = ON       // MCLR habilitado
-#pragma config CP = OFF         // Protección de código deshabilitada
-#pragma config CPD = OFF        // Protección de datos deshabilitada
-#pragma config BOREN = OFF      // Brown-out Reset deshabilitado
-#pragma config IESO = OFF       // Internal/External Switchover deshabilitado
-#pragma config FCMEN = OFF      // Fail-Safe Clock Monitor deshabilitado
-#pragma config LVP = OFF        // Low Voltage Programming deshabilitado
-#pragma config DEBUG = OFF      // Debug deshabilitado
+#pragma config FOSC = HS
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config MCLRE = ON
+#pragma config CP = OFF
+#pragma config CPD = OFF
+#pragma config BOREN = OFF
+#pragma config IESO = OFF
+#pragma config FCMEN = OFF
+#pragma config LVP = OFF
+#pragma config DEBUG = OFF
 
 #define _XTAL_FREQ 20000000
-
-// Global variables
-unsigned char hora = 7;
-unsigned char minuto = 1;
-unsigned char segundos = 0;
-bool is_pm = false;  // false = a.m., true = p.m.
-char texto_hora[20];
 
 int main(void) 
 {
@@ -42,47 +32,45 @@ int main(void)
     Lcd_Init();
     __delay_ms(100);
     
-    Lcd_Clear();
-    Lcd_Set_Cursor(1, 1);
-    Lcd_Write_String("loading...");
-    __delay_ms(1000);
+    const char *message = "Hello World!";
+    char display_buffer[17];
+    char direction = 1;  // 1 = Rigth, -1 = Left
+    char position = 0;
     
     while(1) 
     {
         Lcd_Clear();
         
-        Lcd_Set_Cursor(1, 1);
-        Lcd_Write_String("Everything is good ;)");
-        
-        segundos++;
-        if(segundos >= 60) 
-        {
-            segundos = 0;
-            minuto++;
-            
-            if(minuto >= 60) 
-            {
-                minuto = 0;
-                hora++;
-                
-                if(hora > 12) 
-                {
-                    hora = 1;
-                }
-                
-                if(hora == 12 && minuto == 0) 
-                {
-                    is_pm = !is_pm;
-                }
-            }
+        // fill gaps with spaces
+        for(unsigned char i = 0; i < 16; i++) {
+            display_buffer[i] = ' ';
         }
         
-        Lcd_Set_Cursor(2, 1);
-        sprintf(texto_hora, "%02d:%02d:%02d %s", 
-                hora, minuto, segundos, is_pm ? "PM" : "AM");
-        Lcd_Write_String(texto_hora);
+        // Put the message in current pos 
+        unsigned char msg_idx = 0;
+        for(unsigned char i = position; i < 16 && message[msg_idx] != '\0'; i++) {
+            display_buffer[i] = message[msg_idx];
+            msg_idx++;
+        }
+        display_buffer[16] = '\0';
         
-        __delay_ms(1000);
+        Lcd_Set_Cursor(1, 1);
+        Lcd_Write_String(display_buffer);
+        
+        // Move pos
+        position += direction;
+        
+        // Change path 
+        if(position <= 0) {
+            position = 0;
+            direction = 1;  // Change rigth 
+        }
+        else if(position >= 4) {  // 16 -  message length (12) = 4
+            position = 4;
+            direction = -1;  // Change rigth
+        }
+        
+        __delay_ms(300);
     }
     
     return 0;
