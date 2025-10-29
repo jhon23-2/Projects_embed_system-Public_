@@ -24,7 +24,7 @@ void Lcd_Init(void)
 
 void Lcd_Cmd(unsigned char cmd)
 {
-    char data_u, data_l, data_i;
+    char data_u, data_l;
     data_u = (cmd & 0xF0);
     data_l = ((cmd<<4) & 0xF0); 
    

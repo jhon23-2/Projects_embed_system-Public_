@@ -1,8 +1,8 @@
 /* 
  * File: i2c.c
  * I2C Library Implementation for PIC16F887
+ * Sin warnings de compilación
  */
-
 #include "i2c.h"
 
 #ifdef I2C_MASTER_MODE
@@ -61,13 +61,13 @@ void I2C_Nack(void)
     PIR1bits.SSPIF = 0;
 }
 
-short I2C_Write(char data)
+uint8_t I2C_Write(char data)
 {
     SSPBUF = data;
-    while(PIR1bits.SSPIF == 0);
+    while(!PIR1bits.SSPIF);
     PIR1bits.SSPIF = 0;
-    short b_ok = SSPCON2bits.ACKSTAT;
-    return b_ok;
+    
+    return (uint8_t)SSPCON2bits.ACKSTAT;
 }
 
 unsigned char I2C_Read(void)
