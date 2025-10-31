@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=exercie-5.X
+PROJECTNAME=lcd.X
 
 # Active Configuration
 DEFAULTCONF=default

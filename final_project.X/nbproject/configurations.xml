@@ -4,8 +4,8 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>../../../Downloads/Video 34.- Control de pantalla LCD I2C/LCD_I2C_Test.X/i2c.h</itemPath>
-      <itemPath>../../../Downloads/Video 34.- Control de pantalla LCD I2C/LCD_I2C_Test.X/lcd_i2c.h</itemPath>
+      <itemPath>i2c.h</itemPath>
+      <itemPath>lcd_i2c.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -19,15 +19,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>exercie-5.c</itemPath>
-      <itemPath>../../../Downloads/Video 34.- Control de pantalla LCD I2C/LCD_I2C_Test.X/i2c.c</itemPath>
-      <itemPath>../../../Downloads/Video 34.- Control de pantalla LCD I2C/LCD_I2C_Test.X/lcd_i2c.c</itemPath>
+      <itemPath>lcd.c</itemPath>
+      <itemPath>i2c.c</itemPath>
+      <itemPath>lcd_i2c.c</itemPath>
     </logicalFolder>
   </logicalFolder>
-  <sourceRootList>
-    <Elem>..</Elem>
-    <Elem>../../../Downloads/Video 34.- Control de pantalla LCD I2C/LCD_I2C_Test.X</Elem>
-  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
